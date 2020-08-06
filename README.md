@@ -1,6 +1,6 @@
 # Api Authorization 
 A multiple role-based authorization, based on controller actions.
-![Ruby](https://github.com/montedelgallo/api-authorization/workflows/Ruby/badge.svg?branch=master)
+![Tests](https://github.com/montedelgallo/api-authorization/workflows/Ruby/badge.svg?branch=master)
 ##### Database Model
 ![db_model](model.jpg)
 ## Installation
