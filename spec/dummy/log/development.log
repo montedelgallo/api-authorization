@@ -1,0 +1,632 @@
+Started GET "/" for 127.0.0.1 at 2020-08-03 12:41:36 +0200
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/azdren/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/azdren/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 26.3ms | Allocations: 351)
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 1821)
+
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (354.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (258.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200804090022)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200804090022"]]
+  [1m[35m (241.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-04 09:00:30.154937"], ["updated_at", "2020-08-04 09:00:30.154937"]]
+  [1m[35m (276.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRoles (20200805112357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200805112357"]]
+  [1m[35m (269.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableUserRole (20200805112400)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (40.4ms)[0m  [1m[35mCREATE TABLE "roles_users" ("user_id" integer NOT NULL, "role_id" integer NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200805112400"]]
+  [1m[35m (289.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePermissions (20200805112405)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "permissions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "controller" varchar, "action" varchar, "allowed_params" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200805112405"]]
+  [1m[35m (386.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableRolePermission (20200805112411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE TABLE "permissions_roles" ("role_id" integer NOT NULL, "permission_id" integer NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200805112411"]]
+  [1m[35m (316.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:31:21 +0200
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `helper_method' for ApiAuthorization:Module):
+  
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:32:54 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `helper_method' for ApiAuthorization:Module):
+  
+app/controllers/application_controller.rb:3:in `include'
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:35:53 +0200
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 34.9ms | Allocations: 1774)
+Completed 200 OK in 311ms (Views: 299.1ms | ActiveRecord: 2.0ms | Allocations: 17743)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:42:28 +0200
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `helper_method' for ApiAuthorization:Module):
+  
+app/controllers/application_controller.rb:3:in `include'
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2020-08-05 13:44:28 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/azdren/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/azdren/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.8ms | Allocations: 190)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 895)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:44:32 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1625)
+Completed 200 OK in 54ms (Views: 46.9ms | ActiveRecord: 2.0ms | Allocations: 6925)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:45:20 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 829)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 2483)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:45:38 +0200
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1892)
+Completed 200 OK in 66ms (Views: 53.0ms | ActiveRecord: 2.4ms | Allocations: 8369)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:49:05 +0200
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1868)
+Completed 200 OK in 64ms (Views: 54.1ms | ActiveRecord: 2.1ms | Allocations: 8345)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:49:21 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 845)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 2490)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:50:25 +0200
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1884)
+Completed 200 OK in 81ms (Views: 58.5ms | ActiveRecord: 1.3ms | Allocations: 8361)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:50:46 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 839)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 2484)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:50:57 +0200
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1876)
+Completed 200 OK in 76ms (Views: 64.6ms | ActiveRecord: 1.5ms | Allocations: 8356)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:51:09 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 836)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 1.5ms | Allocations: 2481)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:51:37 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 825)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.6ms | Allocations: 2469)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:51:40 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 823)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 1.2ms | Allocations: 2467)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:51:42 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 835)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.9ms | Allocations: 2479)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:53:31 +0200
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 1874)
+Completed 200 OK in 102ms (Views: 86.2ms | ActiveRecord: 2.0ms | Allocations: 8352)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:53:40 +0200
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1882)
+Completed 200 OK in 70ms (Views: 59.0ms | ActiveRecord: 2.8ms | Allocations: 8359)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:55:07 +0200
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `enable_role_authorization' for ApiAuthorization:Module):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:56:43 +0200
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Filter chain halted as :check_role rendered or redirected
+Completed 403 Forbidden in 14407ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 47787)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:57:59 +0200
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Filter chain halted as :check_role rendered or redirected
+Completed 403 Forbidden in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:59:31 +0200
+Processing by UsersController#index as HTML
+Filter chain halted as :check_role rendered or redirected
+Completed 403 Forbidden in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 150)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 13:59:39 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Filter chain halted as :check_role rendered or redirected
+Completed 403 Forbidden in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-08-05 14:03:46 +0200
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Filter chain halted as :check_role rendered or redirected
+Completed 403 Forbidden in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.4ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/info"], ["action", "properties"], ["created_at", "2020-08-05 13:49:53.733139"], ["updated_at", "2020-08-05 13:49:53.733139"]]
+  [1m[35m (268.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/info"], ["action", "routes"], ["created_at", "2020-08-05 13:49:54.010447"], ["updated_at", "2020-08-05 13:49:54.010447"]]
+  [1m[35m (251.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/info"], ["action", "index"], ["created_at", "2020-08-05 13:49:54.274433"], ["updated_at", "2020-08-05 13:49:54.274433"]]
+  [1m[35m (263.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/mailers"], ["action", "index"], ["created_at", "2020-08-05 13:49:54.548653"], ["updated_at", "2020-08-05 13:49:54.548653"]]
+  [1m[35m (254.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/mailers"], ["action", "preview"], ["created_at", "2020-08-05 13:49:54.813408"], ["updated_at", "2020-08-05 13:49:54.813408"]]
+  [1m[35m (318.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.3ms)[0m  [1m[32mINSERT INTO "permissions" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-08-05 13:49:55.153792"], ["updated_at", "2020-08-05 13:49:55.153792"]]
+  [1m[35m (254.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.4ms)[0m  [1m[32mINSERT INTO "permissions" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-08-05 13:49:55.418044"], ["updated_at", "2020-08-05 13:49:55.418044"]]
+  [1m[35m (353.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "index"], ["created_at", "2020-08-05 13:49:55.780207"], ["updated_at", "2020-08-05 13:49:55.780207"]]
+  [1m[35m (242.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.4ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "create"], ["created_at", "2020-08-05 13:49:56.033608"], ["updated_at", "2020-08-05 13:49:56.033608"]]
+  [1m[35m (240.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "new"], ["created_at", "2020-08-05 13:49:56.285516"], ["updated_at", "2020-08-05 13:49:56.285516"]]
+  [1m[35m (242.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "edit"], ["created_at", "2020-08-05 13:49:56.538981"], ["updated_at", "2020-08-05 13:49:56.538981"]]
+  [1m[35m (230.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (30.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "show"], ["created_at", "2020-08-05 13:49:56.781045"], ["updated_at", "2020-08-05 13:49:56.781045"]]
+  [1m[35m (245.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "update"], ["created_at", "2020-08-05 13:49:57.065802"], ["updated_at", "2020-08-05 13:49:57.065802"]]
+  [1m[35m (251.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "update"], ["created_at", "2020-08-05 13:49:57.330912"], ["updated_at", "2020-08-05 13:49:57.330912"]]
+  [1m[35m (264.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "destroy"], ["created_at", "2020-08-05 13:49:57.605903"], ["updated_at", "2020-08-05 13:49:57.605903"]]
+  [1m[35m (230.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/postmark/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 13:49:57.846755"], ["updated_at", "2020-08-05 13:49:57.846755"]]
+  [1m[35m (232.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/relay/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 13:49:58.089314"], ["updated_at", "2020-08-05 13:49:58.089314"]]
+  [1m[35m (253.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.4ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/sendgrid/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 13:49:58.352804"], ["updated_at", "2020-08-05 13:49:58.352804"]]
+  [1m[35m (251.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/mandrill/inbound_emails"], ["action", "health_check"], ["created_at", "2020-08-05 13:49:58.615996"], ["updated_at", "2020-08-05 13:49:58.615996"]]
+  [1m[35m (241.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/mandrill/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 13:49:58.870000"], ["updated_at", "2020-08-05 13:49:58.870000"]]
+  [1m[35m (285.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.0ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/mailgun/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 13:49:59.166155"], ["updated_at", "2020-08-05 13:49:59.166155"]]
+  [1m[35m (242.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "index"], ["created_at", "2020-08-05 13:49:59.418314"], ["updated_at", "2020-08-05 13:49:59.418314"]]
+  [1m[35m (241.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 13:49:59.671704"], ["updated_at", "2020-08-05 13:49:59.671704"]]
+  [1m[35m (231.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "new"], ["created_at", "2020-08-05 13:49:59.914208"], ["updated_at", "2020-08-05 13:49:59.914208"]]
+  [1m[35m (244.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "edit"], ["created_at", "2020-08-05 13:50:00.177786"], ["updated_at", "2020-08-05 13:50:00.177786"]]
+  [1m[35m (252.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "show"], ["created_at", "2020-08-05 13:50:00.442576"], ["updated_at", "2020-08-05 13:50:00.442576"]]
+  [1m[35m (219.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.0ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "update"], ["created_at", "2020-08-05 13:50:00.672667"], ["updated_at", "2020-08-05 13:50:00.672667"]]
+  [1m[35m (273.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "update"], ["created_at", "2020-08-05 13:50:00.958357"], ["updated_at", "2020-08-05 13:50:00.958357"]]
+  [1m[35m (262.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "destroy"], ["created_at", "2020-08-05 13:50:01.232919"], ["updated_at", "2020-08-05 13:50:01.232919"]]
+  [1m[35m (230.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/reroutes"], ["action", "create"], ["created_at", "2020-08-05 13:50:01.474107"], ["updated_at", "2020-08-05 13:50:01.474107"]]
+  [1m[35m (251.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/blobs"], ["action", "show"], ["created_at", "2020-08-05 13:50:01.738701"], ["updated_at", "2020-08-05 13:50:01.738701"]]
+  [1m[35m (240.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/representations"], ["action", "show"], ["created_at", "2020-08-05 13:50:01.992610"], ["updated_at", "2020-08-05 13:50:01.992610"]]
+  [1m[35m (228.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/disk"], ["action", "show"], ["created_at", "2020-08-05 13:50:02.234004"], ["updated_at", "2020-08-05 13:50:02.234004"]]
+  [1m[35m (252.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/disk"], ["action", "update"], ["created_at", "2020-08-05 13:50:02.497165"], ["updated_at", "2020-08-05 13:50:02.497165"]]
+  [1m[35m (231.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.0ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/direct_uploads"], ["action", "create"], ["created_at", "2020-08-05 13:50:02.739015"], ["updated_at", "2020-08-05 13:50:02.739015"]]
+  [1m[35m (352.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/welcome"], ["action", "index"], ["created_at", "2020-08-05 13:50:03.101924"], ["updated_at", "2020-08-05 13:50:03.101924"]]
+  [1m[35m (303.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 1]]
+  [1m[35m (314.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 2]]
+  [1m[35m (242.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.0ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 3]]
+  [1m[35m (232.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.8ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 4]]
+  [1m[35m (210.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (3.3ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 5]]
+  [1m[35m (243.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (4.3ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 6]]
+  [1m[35m (261.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.4ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 7]]
+  [1m[35m (231.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.6ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 8]]
+  [1m[35m (199.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.8ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 9]]
+  [1m[35m (221.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 10]]
+  [1m[35m (220.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.9ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 11]]
+  [1m[35m (224.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.2ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 12]]
+  [1m[35m (220.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.9ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 13]]
+  [1m[35m (275.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.2ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 14]]
+  [1m[35m (232.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.0ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 15]]
+  [1m[35m (232.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.4ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 16]]
+  [1m[35m (242.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.4ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 17]]
+  [1m[35m (243.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 18]]
+  [1m[35m (232.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.6ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 19]]
+  [1m[35m (222.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (3.1ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 20]]
+  [1m[35m (232.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.9ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 21]]
+  [1m[35m (276.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.0ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 22]]
+  [1m[35m (220.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.3ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 23]]
+  [1m[35m (220.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.1ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 24]]
+  [1m[35m (233.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.8ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 25]]
+  [1m[35m (252.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.1ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 26]]
+  [1m[35m (231.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.8ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 27]]
+  [1m[35m (248.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.8ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 28]]
+  [1m[35m (230.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 29]]
+  [1m[35m (276.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 30]]
+  [1m[35m (232.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (1.3ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 31]]
+  [1m[35m (231.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.3ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 32]]
+  [1m[35m (220.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.6ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 33]]
+  [1m[35m (219.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.6ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 34]]
+  [1m[35m (319.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.2ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 35]]
+  [1m[35m (243.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Destroy (2.7ms)[0m  [1m[31mDELETE FROM "permissions" WHERE "permissions"."id" = ?[0m  [["id", 36]]
+  [1m[35m (220.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.5ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/info"], ["action", "properties"], ["created_at", "2020-08-05 14:02:42.763206"], ["updated_at", "2020-08-05 14:02:42.763206"]]
+  [1m[35m (241.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.0ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/info"], ["action", "routes"], ["created_at", "2020-08-05 14:02:43.014809"], ["updated_at", "2020-08-05 14:02:43.014809"]]
+  [1m[35m (232.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/info"], ["action", "index"], ["created_at", "2020-08-05 14:02:43.257690"], ["updated_at", "2020-08-05 14:02:43.257690"]]
+  [1m[35m (231.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/mailers"], ["action", "index"], ["created_at", "2020-08-05 14:02:43.498778"], ["updated_at", "2020-08-05 14:02:43.498778"]]
+  [1m[35m (254.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/mailers"], ["action", "preview"], ["created_at", "2020-08-05 14:02:43.764630"], ["updated_at", "2020-08-05 14:02:43.764630"]]
+  [1m[35m (251.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.5ms)[0m  [1m[32mINSERT INTO "permissions" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-08-05 14:02:44.027095"], ["updated_at", "2020-08-05 14:02:44.027095"]]
+  [1m[35m (253.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (18.1ms)[0m  [1m[32mINSERT INTO "permissions" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-08-05 14:02:44.290638"], ["updated_at", "2020-08-05 14:02:44.290638"]]
+  [1m[35m (258.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.4ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "index"], ["created_at", "2020-08-05 14:02:44.576895"], ["updated_at", "2020-08-05 14:02:44.576895"]]
+  [1m[35m (220.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.5ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "create"], ["created_at", "2020-08-05 14:02:44.807892"], ["updated_at", "2020-08-05 14:02:44.807892"]]
+  [1m[35m (286.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "new"], ["created_at", "2020-08-05 14:02:45.104667"], ["updated_at", "2020-08-05 14:02:45.104667"]]
+  [1m[35m (230.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "edit"], ["created_at", "2020-08-05 14:02:45.355207"], ["updated_at", "2020-08-05 14:02:45.355207"]]
+  [1m[35m (212.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.0ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "show"], ["created_at", "2020-08-05 14:02:45.577321"], ["updated_at", "2020-08-05 14:02:45.577321"]]
+  [1m[35m (251.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "update"], ["created_at", "2020-08-05 14:02:45.840861"], ["updated_at", "2020-08-05 14:02:45.840861"]]
+  [1m[35m (240.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "update"], ["created_at", "2020-08-05 14:02:46.094352"], ["updated_at", "2020-08-05 14:02:46.094352"]]
+  [1m[35m (349.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "users"], ["action", "destroy"], ["created_at", "2020-08-05 14:02:46.456040"], ["updated_at", "2020-08-05 14:02:46.456040"]]
+  [1m[35m (209.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/postmark/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 14:02:46.676660"], ["updated_at", "2020-08-05 14:02:46.676660"]]
+  [1m[35m (220.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/relay/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 14:02:46.907954"], ["updated_at", "2020-08-05 14:02:46.907954"]]
+  [1m[35m (240.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.5ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/sendgrid/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 14:02:47.160098"], ["updated_at", "2020-08-05 14:02:47.160098"]]
+  [1m[35m (241.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/mandrill/inbound_emails"], ["action", "health_check"], ["created_at", "2020-08-05 14:02:47.412695"], ["updated_at", "2020-08-05 14:02:47.412695"]]
+  [1m[35m (241.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/mandrill/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 14:02:47.665851"], ["updated_at", "2020-08-05 14:02:47.665851"]]
+  [1m[35m (232.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "action_mailbox/ingresses/mailgun/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 14:02:47.908023"], ["updated_at", "2020-08-05 14:02:47.908023"]]
+  [1m[35m (220.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "index"], ["created_at", "2020-08-05 14:02:48.138564"], ["updated_at", "2020-08-05 14:02:48.138564"]]
+  [1m[35m (230.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "create"], ["created_at", "2020-08-05 14:02:48.382241"], ["updated_at", "2020-08-05 14:02:48.382241"]]
+  [1m[35m (252.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "new"], ["created_at", "2020-08-05 14:02:48.644355"], ["updated_at", "2020-08-05 14:02:48.644355"]]
+  [1m[35m (252.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "edit"], ["created_at", "2020-08-05 14:02:48.908082"], ["updated_at", "2020-08-05 14:02:48.908082"]]
+  [1m[35m (287.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.5ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "show"], ["created_at", "2020-08-05 14:02:49.205217"], ["updated_at", "2020-08-05 14:02:49.205217"]]
+  [1m[35m (240.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.3ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "update"], ["created_at", "2020-08-05 14:02:49.457794"], ["updated_at", "2020-08-05 14:02:49.457794"]]
+  [1m[35m (220.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.9ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "update"], ["created_at", "2020-08-05 14:02:49.688665"], ["updated_at", "2020-08-05 14:02:49.688665"]]
+  [1m[35m (255.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/inbound_emails"], ["action", "destroy"], ["created_at", "2020-08-05 14:02:49.952691"], ["updated_at", "2020-08-05 14:02:49.952691"]]
+  [1m[35m (224.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.2ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/conductor/action_mailbox/reroutes"], ["action", "create"], ["created_at", "2020-08-05 14:02:50.194543"], ["updated_at", "2020-08-05 14:02:50.194543"]]
+  [1m[35m (241.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.5ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/blobs"], ["action", "show"], ["created_at", "2020-08-05 14:02:50.446979"], ["updated_at", "2020-08-05 14:02:50.446979"]]
+  [1m[35m (242.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/representations"], ["action", "show"], ["created_at", "2020-08-05 14:02:50.700470"], ["updated_at", "2020-08-05 14:02:50.700470"]]
+  [1m[35m (240.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.1ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/disk"], ["action", "show"], ["created_at", "2020-08-05 14:02:50.952774"], ["updated_at", "2020-08-05 14:02:50.952774"]]
+  [1m[35m (261.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (3.0ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/disk"], ["action", "update"], ["created_at", "2020-08-05 14:02:51.227461"], ["updated_at", "2020-08-05 14:02:51.227461"]]
+  [1m[35m (240.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (2.6ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "active_storage/direct_uploads"], ["action", "create"], ["created_at", "2020-08-05 14:02:51.480643"], ["updated_at", "2020-08-05 14:02:51.480643"]]
+  [1m[35m (253.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("controller", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["controller", "rails/welcome"], ["action", "index"], ["created_at", "2020-08-05 14:02:51.745121"], ["updated_at", "2020-08-05 14:02:51.745121"]]
+  [1m[35m (231.3ms)[0m  [1m[36mcommit transaction[0m
