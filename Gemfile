@@ -17,3 +17,4 @@ gemspec
 gem 'byebug', group: %i[development test]
 gem 'rspec', '~> 3.0'
 gem 'rspec-rails'
+gem "devise"
