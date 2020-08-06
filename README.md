@@ -1,4 +1,4 @@
-# Api Authorization 
+# Api Authorization (The gem is in development stage)
 A multiple role-based authorization, based on controller actions.
 ![Tests](https://github.com/montedelgallo/api-authorization/workflows/Ruby/badge.svg?branch=master)
 ##### Database Model
