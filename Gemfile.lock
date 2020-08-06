@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    api_authorization (0.1.1)
+    api_authorization (0.1.2)
       byebug
       rails (~> 6.0.3, >= 6.0.3.2)
 
