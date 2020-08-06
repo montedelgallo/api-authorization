@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -18,11 +20,11 @@ require 'bundler/gem_tasks'
 
 require 'rake/testtask'
 
-Rake::TestTask.new(:test) do |t|
+Rake::TestTask.new(:test) do |_t|
   # t.libs << 'spec'
   # t.pattern = 'test/**/*_test.rb'
   # t.verbose = true
-  sh "rspec"
+  sh 'rspec --format documentation'
 end
 
 task default: :test

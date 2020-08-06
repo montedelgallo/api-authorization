@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    api_authorization (0.1.0)
+    api_authorization (0.1.1)
       byebug
       rails (~> 6.0.3, >= 6.0.3.2)
 
@@ -130,6 +130,14 @@ GEM
     rspec-mocks (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
+    rspec-rails (3.9.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+      rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -155,6 +163,7 @@ DEPENDENCIES
   api_authorization!
   byebug
   rspec (~> 3.0)
+  rspec-rails
   sqlite3
 
 BUNDLED WITH

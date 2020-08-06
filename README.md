@@ -1,6 +1,10 @@
-# Api Authorization (The gem is in development stage)
+# Api Authorization (The gem is in development)
 A multiple role-based authorization, based on controller actions.
+
 ![Tests](https://github.com/montedelgallo/api-authorization/workflows/Ruby/badge.svg?branch=master)
+![Ruby Gem](https://github.com/montedelgallo/api-authorization/workflows/Ruby%20Gem/badge.svg?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 ##### Database Model
 ![db_model](model.jpg)
 ## Installation
