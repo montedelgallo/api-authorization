@@ -19,15 +19,19 @@ module ApiAuthorization
       roles = current_user.try(:roles)
       return if roles.find { |role| role.try(:name).try(:downcase) == 'superadmin' }
 
-      return render json: { error: 'You are not authorized' }, status: 403 if current_user.roles.empty?
+      # return render json: { error: 'You are not authorized' }, status: 403 if current_user.roles.empty?
+      return not_authorized if current_user.roles.empty?
+
 
       current_user.roles.each do |role|
         return if role.permissions.where(controller: params['controller'], action: params['action']).count.positive?
       end
 
-      render json: { error: 'You are not authorized' }, status: 403
+      # render json: { error: 'You are not authorized' }, status: 403
+      not_authorized
     rescue StandardError => e
-      render json: { error: 'You are not authorized' }, status: 403
+      # render json: { error: 'You are not authorized' }, status: 403
+      not_authorized
     end
 
     # Filter the request params to know wether or not a user has
@@ -42,7 +46,6 @@ module ApiAuthorization
     # @params [Action::Parameters]
     # @return [Action::Parameters] without the disallowed key/values.
     def check_allowed_params(params, controller, action)
-      puts 'AUTHORIZATION: Checking the request params' if Rails.env == 'development'
 
       roles = current_user.try(:permissions)
       return params if roles.find { |role| role.try(:name).try(:downcase) == 'superadmin' }
@@ -63,10 +66,26 @@ module ApiAuthorization
 
       params
     end
+
+    # a wrapper around respond_to helper that returns
+    # content as json, and html
+    #
+    # @params [String,Fixnum]
+    # @return [ActionController::MimeResponds] 
+    def not_authorized(message = 'You are not authorized', status = 403)
+      respond_to do |format|
+        format.json do
+          return render json: { error: message }, status: status
+        end
+        format.html do
+          return render html: "<h2> Forbidden #{status}</h2>".html_safe, status: status
+        end
+      end
+    end
   end
 
   class Railtie < ::Rails::Railtie
-    # exportin rake tasks
+    # exporting rake tasks
     rake_tasks do
       load 'tasks/initialize.rake'
       load 'tasks/user_tasks.rake'
