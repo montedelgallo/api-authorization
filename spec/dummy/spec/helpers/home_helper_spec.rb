@@ -1,4 +1,5 @@
-require 'rails_helper'
+require_relative './../rails_helper'
+
 
 # Specs in this file have access to a helper object that includes
 # the HomeHelper. For example:

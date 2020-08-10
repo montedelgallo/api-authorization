@@ -1,10 +1,10 @@
-example_id                                                    | status | run_time        |
-------------------------------------------------------------- | ------ | --------------- |
-./spec/api_authorization/api_authorization_spec.rb[1:1:1]     | passed | 0.00178 seconds |
-./spec/dummy/spec/controllers/users_controller_spec.rb[1:1:1] | passed | 0.01158 seconds |
-./spec/dummy/spec/models/permission_spec.rb[1:1:1:1]          | passed | 0.01101 seconds |
-./spec/dummy/spec/models/permission_spec.rb[1:1:2:1]          | passed | 0.00829 seconds |
-./spec/dummy/spec/models/role_spec.rb[1:1:1:1]                | passed | 0.00754 seconds |
-./spec/dummy/spec/models/role_spec.rb[1:1:2:1]                | passed | 0.00238 seconds |
-./spec/dummy/spec/models/user_spec.rb[1:1:1:1]                | passed | 0.00948 seconds |
-./spec/dummy/spec/models/user_spec.rb[1:1:2:1]                | passed | 0.0029 seconds  |
+example_id                                                   | status  | run_time        |
+------------------------------------------------------------ | ------- | --------------- |
+./spec/api_authorization/api_authorization_spec.rb[1:1:1]    | passed  | 0.00195 seconds |
+./spec/dummy/spec/controllers/home_controller_spec.rb[1:1:1] | failed  | 0.04192 seconds |
+./spec/dummy/spec/helpers/authorization_helper_spec.rb[1:1]  | pending | 0.00001 seconds |
+./spec/dummy/spec/helpers/home_helper_spec.rb[1:1]           | pending | 0 seconds       |
+./spec/dummy/spec/models/permission_spec.rb[1:1:1:1]         | passed  | 0.01501 seconds |
+./spec/dummy/spec/models/permission_spec.rb[1:1:2:1]         | failed  | 0.08819 seconds |
+./spec/dummy/spec/models/role_spec.rb[1:1]                   | pending | 0 seconds       |
+./spec/dummy/spec/models/user_spec.rb[1:1]                   | pending | 0 seconds       |
