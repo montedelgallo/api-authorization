@@ -41,7 +41,7 @@ $ rails api_auth:create_permissions
 ```
 4. DONE
 
-##### More CLI commands will be published soon
+##### More [CLI commands](cli.MD)
 
 ## Contributing
 Feel free to suggest a feature or report a bug.
