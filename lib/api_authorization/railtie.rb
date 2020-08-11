@@ -87,7 +87,8 @@ module ApiAuthorization
   class Railtie < ::Rails::Railtie
     # exporting rake tasks
     rake_tasks do
-      load 'tasks/initialize.rake'
+      load 'tasks/main_tasks.rake'
+      load 'tasks/dashboard_tasks.rake'
       load 'tasks/user_tasks.rake'
     end
   end

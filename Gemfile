@@ -15,7 +15,7 @@ gemspec
 
 # To use a debugger
 gem 'byebug', group: %i[development test]
-gem 'devise'
-gem 'devise-jwt', '~> 0.6.0'
+gem 'bcrypt'
 gem 'rspec', '~> 3.0', group: %i[development test]
 gem 'rspec-rails', group: %i[development test]
+gem 'rails_admin', '~> 2.0'

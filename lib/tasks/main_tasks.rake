@@ -3,7 +3,7 @@
 require_relative './../app_routes/application_routes.rb'
 
 namespace :api_auth do
-  desc 'Create the initial tables and populate the permissions table'
+  desc 'Create the initial tables'
   task :install, %i[tenant single_role] => [:environment] do |_t, args|
     Apartment::Tenant.switch! args[:tenant] if args[:tenant]
 
@@ -49,7 +49,7 @@ namespace :api_auth do
   end
 
   desc 'Populate the permissions table with all the controllers and actions of the application'
-  task :populate_permissions, %i[tenant] => [:environment] do |_t, args|
+  task :re_populate_permissions, %i[tenant] => [:environment] do |_t, args|
     Apartment::Tenant.switch! args[:tenant] if args[:tenant]
     AppRoutes::ApplicationRoutes.new
   end
