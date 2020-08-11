@@ -1,7 +1,6 @@
 ## CLI Commands
-To get started using the authorization gem checkout the README.MD Usage section
-
-rails api_auth:create_admin[email,password] # Create an admin
+To learn more on how to use the `api_authorization` gem checkout the README.MD Usage section.
+Below are some useful commands for creating users with different roles(more comming soon...)
 
 | Command  | arguments | Description |
 | -------- | ------- | ----------- |
