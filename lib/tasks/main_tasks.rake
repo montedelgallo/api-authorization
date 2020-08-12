@@ -15,8 +15,8 @@ namespace :api_auth do
 
       if args[:single_role].nil?
         # creating roles table
-        # sh 'rails g model role name:string description:text', verbose: false
-        # sh 'rails db:migrate', verbose: false
+        sh 'rails g model role name:string description:text', verbose: false
+        sh 'rails db:migrate', verbose: false
 
         # giving permissions
         # sh 'chmod a+x ./../../bin/thor_tasks'
