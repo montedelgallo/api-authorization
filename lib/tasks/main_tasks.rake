@@ -14,12 +14,14 @@ namespace :api_auth do
 
       if args[:single_role].nil?
         # creating roles table
-        sh 'rails g model role name:string description:text', verbose: false
-        sh 'rails db:migrate', verbose: false
+        # sh 'rails g model role name:string description:text', verbose: false
+        # sh 'rails db:migrate', verbose: false
 
+        # giving permissions
+        sh 'chmod a+x ./../../bin/thor_tasks'
         # adding has_many_and_belongs_to with thor
-        sh 'thor cli:append_has_and_belongs_to_many role users', verbose: false
-        sh 'thor cli:append_has_and_belongs_to_many user roles', verbose: false
+        sh './../../bin/thor_tasks append_has_and_belongs_to_many role users', verbose: false
+        sh './../../bin/thor_tasks append_has_and_belongs_to_many user roles', verbose: false
 
         # creating a join table between users and roles
         sh 'rails g migration CreateJoinTableUserRole user role', verbose: false
@@ -34,8 +36,8 @@ namespace :api_auth do
       sh 'rails g model permission controller:string action:string allowed_params:json', verbose: false
       sh 'rails db:migrate', verbose: false
 
-      sh 'thor cli:append_has_and_belongs_to_many role permissions', verbose: false
-      sh 'thor cli:append_has_and_belongs_to_many permission roles', verbose: false
+      sh './../../bin/thor_tasks append_has_and_belongs_to_many role permissions', verbose: false
+      sh './../../bin/thor_tasks append_has_and_belongs_to_many permission roles', verbose: false
 
       # creating a join table between roles and permissions
       sh 'rails g migration CreateJoinTableRolePermission role permission', verbose: false
