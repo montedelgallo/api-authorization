@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative './../app_routes/application_routes.rb'
+require_relative './../api_authorization/cli.rb'
 
 namespace :api_auth do
   desc 'Create the initial tables'
@@ -18,10 +19,10 @@ namespace :api_auth do
         # sh 'rails db:migrate', verbose: false
 
         # giving permissions
-        sh 'chmod a+x ./../../bin/thor_tasks'
+        # sh 'chmod a+x ./../../bin/thor_tasks'
         # adding has_many_and_belongs_to with thor
-        sh './../../bin/thor_tasks append_has_and_belongs_to_many role users', verbose: false
-        sh './../../bin/thor_tasks append_has_and_belongs_to_many user roles', verbose: false
+        sh 'bundle exec bin/api_auth append_has_and_belongs_to_many role users', verbose: false
+        sh 'bundle exec bin/api_auth append_has_and_belongs_to_many user roles', verbose: false
 
         # creating a join table between users and roles
         sh 'rails g migration CreateJoinTableUserRole user role', verbose: false
@@ -36,8 +37,8 @@ namespace :api_auth do
       sh 'rails g model permission controller:string action:string allowed_params:json', verbose: false
       sh 'rails db:migrate', verbose: false
 
-      sh './../../bin/thor_tasks append_has_and_belongs_to_many role permissions', verbose: false
-      sh './../../bin/thor_tasks append_has_and_belongs_to_many permission roles', verbose: false
+      sh 'bundle exec bin/api_auth append_has_and_belongs_to_many role permissions', verbose: false
+      sh 'bundle exec bin/api_auth append_has_and_belongs_to_many permission roles', verbose: false
 
       # creating a join table between roles and permissions
       sh 'rails g migration CreateJoinTableRolePermission role permission', verbose: false
