@@ -31,8 +31,8 @@ Gem::Specification.new do |spec|
 
   # spec.add_dependency 'activesupport'
   spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.2'
+  spec.add_dependency 'thor'
   # spec.add_dependency 'rake', '~> 13.0', '>= 13.0.1'
-  spec.add_development_dependency 'sqlite3'
+  # spec.add_development_dependency 'sqlite3'
   # spec.add_dependency 'byebug'
-  spec.add_dependency "thor"
 end
