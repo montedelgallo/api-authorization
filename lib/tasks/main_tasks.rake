@@ -11,7 +11,7 @@ namespace :api_auth do
     puts 'Initializing'
 
     # Generating the binstub of the gem
-    sh 'bundle binstubs api_authorization'
+    sh 'bundle exec bundle binstubs api_authorization --path ./bin'
 
     # TODO: before creating the migration make sure to check that there is
     #  no roles tables or permissions tables
