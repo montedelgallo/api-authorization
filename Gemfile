@@ -18,4 +18,3 @@ gem 'byebug', group: %i[development test]
 gem 'bcrypt'
 gem 'rspec', '~> 3.0', group: %i[development test]
 gem 'rspec-rails', group: %i[development test]
-gem 'rails_admin', '~> 2.0'
