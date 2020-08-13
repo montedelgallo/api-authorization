@@ -9,6 +9,10 @@ namespace :api_auth do
     Apartment::Tenant.switch! args[:tenant] if args[:tenant]
 
     puts 'Initializing'
+
+    # Generating the binstub of the gem
+    sh 'bundle binstubs api_authorization'
+
     # TODO: before creating the migration make sure to check that there is
     #  no roles tables or permissions tables
     if ActiveRecord::Base.connection.table_exists? 'users'
