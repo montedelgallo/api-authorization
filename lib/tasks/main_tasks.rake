@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative './../app_routes/application_routes.rb'
-require_relative './../api_authorization/cli.rb'
+require_relative './../api_authorization/permission_generator'
+require_relative './../api_authorization/cli'
 
 namespace :api_auth do
   desc 'Create the initial tables'
@@ -58,6 +58,6 @@ namespace :api_auth do
   desc 'Populate the permissions table with all the controllers and actions of the application'
   task :re_populate_permissions, %i[tenant] => [:environment] do |_t, args|
     Apartment::Tenant.switch! args[:tenant] if args[:tenant]
-    AppRoutes::ApplicationRoutes.new
+    ApiAuthorization::PermissionGenerator.new
   end
 end

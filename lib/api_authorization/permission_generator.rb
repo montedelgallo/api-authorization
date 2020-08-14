@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module AppRoutes
-  class ApplicationRoutes
+module ApiAuthorization
+  class PermissionGenerator
     def initialize
       @routes = []
 
@@ -12,16 +12,6 @@ module AppRoutes
           action: r.defaults[:action],
           method: r.verb
         }
-        # rotta_finale = {
-        #   controller: r.defaults[:controller],
-        #   action: r.defaults[:action]
-        # }
-        # check = rotta[:controller]
-        # verb = rotta[:method]
-        # action = rotta[:action]
-        # if check && verb != 'PATCH' && action != 'new' && action != 'edit'
-        #   @routes.push(rotta_finale) if check.include? 'api/v1'
-        # end
 
         @routes.push(route)
       end
@@ -34,7 +24,14 @@ module AppRoutes
 
     def generate_routes
       puts 'Populating permissions_table with routes of the application' if Rails.env == 'development'
-      Permission.destroy_all
+      begin
+        Permission.destroy_all
+      rescue NameError => e
+        puts 'No Permission table was found please run "rails api_auth:install" first to generate the tables'
+        puts e.backtrace if Rails.env == 'development'
+        return
+      end
+
       @routes.each do |k|
         Permission.create!(controller: k[:controller], action: k[:action])
       end

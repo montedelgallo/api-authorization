@@ -2,6 +2,7 @@
 
 require 'thor'
 require 'api_authorization'
+
 module ApiAuthorization
   class Cli < Thor
     include Thor::Actions
