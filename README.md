@@ -40,11 +40,15 @@ $ rails api_auth:re_populate_permissions
   enable_role_authorization
 ```
 4. You can create/read/update/delete roles and permissions for the user through [CLI commands](cli.MD) or by
-using the dashboard which you need to install seperately by running:
+using the dashboard which is depended on [rails_admin](https://github.com/sferik/rails_admin) gem you need to install seperately by running:
 ```bash
 rails api_auth:install_dashboard
 ```
-5. And after running the rails app visit:
+5. add rails_admin on your Gemfile: 
+```ruby
+  gem 'rails_admin', '~> 2.0'
+```
+6. And after running `bundle instal` and starting the rails app visit:
 ```
 http://localhost:3000/auth_dashboard
 ```
