@@ -1,8 +1,8 @@
 # Api Authorization (The gem is in development)
 A multiple role-based authorization, based on controller actions.
-
+`api_authorization` gem acts as a middleware and checks if `current_user` has the right to visit the controller actions.
+It does it by checking the roles of `current_user`  if it has any realationships with permissions table.
 ![Tests](https://github.com/montedelgallo/api-authorization/workflows/Ruby/badge.svg?branch=master)
-![Ruby Gem](https://github.com/montedelgallo/api-authorization/workflows/Ruby%20Gem/badge.svg?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ##### Database Model
@@ -39,6 +39,8 @@ $ rails api_auth:re_populate_permissions
   include ApiAuthorization
   enable_role_authorization
 ```
+#### Make sure that `current_user` is not `nil` before putting the snippet above.
+
 4. You can create/read/update/delete roles and permissions for the user through [CLI commands](cli.MD) or by
 using the dashboard which is depended on [rails_admin](https://github.com/sferik/rails_admin) gem you need to install seperately by running:
 ```bash
