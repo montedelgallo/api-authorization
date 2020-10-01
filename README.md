@@ -2,6 +2,9 @@
 A multiple role-based authorization, based on controller actions.
 `api_authorization` gem acts as a middleware and checks if `current_user` has the right to visit the controller actions.
 It does it by checking the roles of `current_user`  if it has any realationships with permissions table.
+
+This work has been inspired by a very similar implementation I've worked on with [Lorenzo Pagano](https://github.com/lorenzopagano) and [Andrea Pavoni](https://github.com/andreapavoni). They taught me the Ruby art and I'll be forever grateful for this.
+
 ![Tests](https://github.com/montedelgallo/api-authorization/workflows/Ruby/badge.svg?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
